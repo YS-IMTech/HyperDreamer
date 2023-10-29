@@ -69,49 +69,29 @@
     <!-- abstract -->
     <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
     <p class="content is-size-6 has-text-left">
-    <img src="images/teaser.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/>
-3D content creation from a single image is a long-standing yet highly desirable task. Recent advances introduce 2D diffusion priors, yielding reasonable results. However, existing methods are not hyper-realistic enough for post-generation usage, as users cannot view, render and edit the resulting 3D content from a full range. 
-To address these challenges, we introduce <strong><em>HyperDreamer</em></strong> with several key designs and appealing properties:
-<b>1) Full-range viewable:</b> 360° mesh modeling with high-resolution textures enables the creation of visually compelling 3D models from a full range of observation points.
-<b>2) Full-range renderable:</b> Fine-grained semantic segmentation and data-driven priors are incorporated as guidance to learn reasonable albedo, roughness, and specular properties of the materials, enabling semantic-aware arbitrary material estimation.
-<b>3) Full-range editable:</b> For a generated model or their own data, users can interactively select any region via a few clicks and efficiently edit the texture with text-based guidance.
-Extensive experiments demonstrate the effectiveness of <strong><em>HyperDreamer</em></strong> in modeling region-aware materials with high-resolution textures and enabling user-friendly editing. 
-We believe that <strong><em>HyperDreamer</em></strong> holds promise for advancing 3D content creation and finding applications in various domains.
+    <img src="images/teaser.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+
+    3D content creation from a single image is a long-standing yet highly desirable task. Recent advances introduce 2D diffusion priors, yielding reasonable results. However, existing methods are not hyper-realistic enough for post-generation usage, as users cannot view, render and edit the resulting 3D content from a full range. 
+    To address these challenges, we introduce <strong><em>HyperDreamer</em></strong> with several key designs and appealing properties:
+    <b>1) Full-range viewable:</b> 360° mesh modeling with high-resolution textures enables the creation of visually compelling 3D models from a full range of observation points.
+    <b>2) Full-range renderable:</b> Fine-grained semantic segmentation and data-driven priors are incorporated as guidance to learn reasonable albedo, roughness, and specular properties of the materials, enabling semantic-aware arbitrary material estimation.
+    <b>3) Full-range editable:</b> For a generated model or their own data, users can interactively select any region via a few clicks and efficiently edit the texture with text-based guidance.
+    Extensive experiments demonstrate the effectiveness of <strong><em>HyperDreamer</em></strong> in modeling region-aware materials with high-resolution textures and enabling user-friendly editing. 
+    We believe that <strong><em>HyperDreamer</em></strong> holds promise for advancing 3D content creation and finding applications in various domains.
     </p>
     
     <!-- results (videos) -->
     <p class="title is-3 mt-5 has-text-centered"> Video </p>
-
-    <!-- <p class="content has-text-centered is-size-5">
-      Our method converges in 2 minutes for image-to-3D while keeping good generation quality.
-    </p> -->
-    <video muted autoplay controls loop> <source src="videos/HyperDreamer_Demo.mp4" type="video/mp4"> </video>
+    <video muted autoplay controls loop> <source src="videos/HyperDreamer_Demo.mp4" type="video/mp4"> </video><br>
 
 
+    <p class="title is-3 mt-5 has-text-centered"> Method Overview </p>
+    <img src="images/pipeline.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-          <div class="container is-max-desktop">
- 
-
-          <!-- Overview. -->
-          <div class="columns is-centered" style="margin-top: 15px">
-              <div class="column is-full-width">
-                  <h2 class="title is-4">Method Overview</h2>
-                  <img src="images/pipeline.png"/>
-                  <div class="content has-text-justified" style="padding-top: 15px">
-                      <p> Overview of our 3D generation and editing pipeline. We introduce diffusion priors, semantic priors, and derendering priors into this
-                        highly under-constraint problem to enable high-resolution textures with material modeling and interactive editing after the generation.
-                      </p>
-                  </div>
-
-              </div>
-
-          </div>
-
-      </div>
-    </section>
-
+    <p class="content has-text-centered is-size-5">
+      Overview of our 3D generation and editing pipeline. We introduce diffusion priors, semantic priors, and derendering priors into this
+      highly under-constraint problem to enable high-resolution textures with material modeling and interactive editing after the generation.
+    </p>
 
 
 
