@@ -46,10 +46,10 @@
     <!-- other links -->
     <div class="is-flex is-justify-content-center">
       <span class="icon-text mx-1">
-        <a class="button is-dark" href="https://arxiv.org/abs/2309.16653" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>  </a> 
+        <a class="button is-dark" href="https://ys-imtech.github.io/HyperDreamer/" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>  </a> 
       </span>
       <span class="icon-text mx-1">
-        <a class="button is-dark" href="https://github.com/dreamgaussian/dreamgaussian" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a> 
+        <a class="button is-dark" href="https://ys-imtech.github.io/HyperDreamer/" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a> 
       </span>
     </div>
    
@@ -61,14 +61,14 @@
     <!-- abstract -->
     <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
     <p class="content is-size-6 has-text-left">
-Recent advances in 3D content creation mostly leverage optimization-based 3D generation via score distillation sampling (SDS).
-Though promising results have been exhibited, these methods often suffer from slow per-sample optimization, limiting their practical usage. 
-In this paper, we propose <b>DreamGaussian</b>, a novel 3D content generation framework that achieves both efficiency and quality simultaneously. 
-Our key insight is to design a generative 3D Gaussian Splatting model with companioned mesh extraction and texture refinement in UV space.
-In contrast to the occupancy pruning used in Neural Radiance Fields, we demonstrate that the progressive densification of 3D Gaussians converges significantly faster for 3D generative tasks.
-To further enhance the texture quality and facilitate downstream applications, we introduce an efficient algorithm to convert 3D Gaussians into textured meshes and apply a fine-tuning stage to refine the details.
-Extensive experiments demonstrate the superior efficiency and competitive generation quality of our proposed approach.
-Notably, DreamGaussian produces high-quality textured meshes in just 2 minutes from a single-view image, achieving approximately 10 times acceleration compared to existing methods. 
+
+3D content creation from a single image is a long-standing yet highly desirable task. Recent advances introduce 2D diffusion priors, yielding reasonable results. However, existing methods are not hyper-realistic enough for post-generation usage, as users cannot view, render and edit the resulting 3D content from a full range. 
+To address these challenges, we introduce <b>HyperDreamer</b> with several key designs and appealing properties:
+<b>Full-range viewable:</b> 360° mesh modeling with high-resolution textures enables the creation of visually compelling 3D models from a full range of observation points.
+<b>Full-range renderable:</b> Fine-grained semantic segmentation and data-driven priors are incorporated as guidance to learn reasonable albedo, roughness, and specular properties of the materials, enabling semantic-aware arbitrary material estimation.
+<b>Full-range editable:</b> For a generated model or their own data, users can interactively select any region via a few clicks and efficiently edit the texture with text-based guidance.
+Extensive experiments demonstrate the effectiveness of <b>HyperDreamer</b> in modeling region-aware materials with high-resolution textures and enabling user-friendly editing. 
+We believe that <b>HyperDreamer</b> holds promise for advancing 3D content creation and finding applications in various domains.
     </p>
     
     <!-- results (videos) -->
