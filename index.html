@@ -72,10 +72,191 @@
     <img src="images/teaser.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p>
     <p align="left">
       3D content creation from a single image is a long-standing yet highly desirable task. Recent advances introduce 2D diffusion priors, yielding reasonable results. However, existing methods are not hyper-realistic enough for post-generation usage, as users cannot view, render and edit the resulting 3D content from a full range. 
-      To address these challenges, we introduce <strong><em>HyperDreamer</em></strong> with several key designs and appealing properties:
-      <b>1) Full-range viewable:</b> 360° mesh modeling with high-resolution textures enables the creation of visually compelling 3D models from a full range of observation points.
-      <b>2) Full-range renderable:</b> Fine-grained semantic segmentation and data-driven priors are incorporated as guidance to learn reasonable albedo, roughness, and specular properties of the materials, enabling semantic-aware arbitrary material estimation.
-      <b>3) Full-range editable:</b> For a generated model or their own data, users can interactively select any region via a few clicks and efficiently edit the texture with text-based guidance.
+      To address these cha<!doctype html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bulma css template -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- model viewer -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+        <title>
+          HyperDreamer
+        </title>
+        <!-- <link rel="icon" href="icon.ico"> -->
+      </head>
+      <body>
+        <section class="section">
+      
+        <div class="container has-text-centered">
+          <!-- paper title -->
+          <p class="title is-2"> HyperDreamer: Hyper-Realistic 3D Content Generation<br> and Editing from a Single Image </p><br>
+          <!-- publication -->
+          <p class="subtitle is-4"> SIGGRAPH Asia 2023 (Conference Track) </p>
+          <!-- authors -->
+          <p class="title is-5 mt-2"> 
+            <a href="https://wutong16.github.io/" target="_blank">Tong Wu</a><sup>1,2*</sup>, 
+            <a href="https://github.com/Lizb6626" target="_blank">Zhibing Li</a><sup>1,2*</sup>, 
+            <a href="https://ys-imtech.github.io/" target="_blank">Shuai Yang</a><sup>1,3*</sup>, 
+            <a href="https://panzhang0212.github.io/" target="_blank">Pan Zhang</a><sup>1</sup>,
+            <a href="https://xingangpan.github.io/" target="_blank">Xingang Pan</a><sup>4</sup>,
+            <a href="https://myownskyw7.github.io/" target="_blank">Jiaqi Wang</a><sup>1</sup>,
+            <a href="http://dahua.me/" target="_blank">Dahua Lin</a><sup>1,2</sup>&#9993,
+            <a href="https://liuziwei7.github.io/" target="_blank">Ziwei Liu</a><sup>4</sup>&#9993
+      
+          </p>
+          <!-- affiliations -->
+          <p class="subtitle is-5"> 
+            <sup>1</sup> Shanghai AI Laboratory,
+            <sup>2</sup> The Chinese University of Hong Kong,
+            <sup>3</sup> Shanghai Jiao Tong University, 
+            <sup>4</sup> S-Lab, NTU
+          </p>
+      
+          <!-- other links -->
+          <div class="is-flex is-justify-content-center">
+            <span class="icon-text mx-1">
+              <a class="button is-dark" href=" " role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Paper </span>  </a>
+            </span>
+            <span class="icon-text mx-1">
+              <a class="button is-dark" href=" " role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code(coming soon) </span> </a>
+            </span>
+          </div><br>
+         
+        </div>
+        
+      
+      
+      
+      
+      
+      
+        <!-- main container -->
+        <div class="container is-max-desktop has-text-centered">
+      
+          
+      
+          <!-- abstract -->
+          <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
+          <p class="content is-size-6 has-text-left">
+          <img src="images/teaser.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p>
+          <p align="left">
+            3D content creation from a single image is a long-standing yet highly desirable task. Recent advances introduce 2D diffusion priors, yielding reasonable results. However, existing methods are not hyper-realistic enough for post-generation usage, as users cannot view, render and edit the resulting 3D content from a full range. 
+            To address these challenges, we introduce <strong><em>HyperDreamer</em></strong> with several key designs and appealing properties:
+            <b>1) Viewable:</b> 360° mesh modeling with high-resolution textures enables the creation of visually compelling 3D models from a full range of observation points.
+            <b>2) Renderable:</b> Fine-grained semantic segmentation and data-driven priors are incorporated as guidance to learn reasonable albedo, roughness, and specular properties of the materials, enabling semantic-aware arbitrary material estimation.
+            <b>3) Editable:</b> For a generated model or their own data, users can interactively select any region via a few clicks and efficiently edit the texture with text-based guidance.
+            Extensive experiments demonstrate the effectiveness of <strong><em>HyperDreamer</em></strong> in modeling region-aware materials with high-resolution textures and enabling user-friendly editing. 
+            We believe that <strong><em>HyperDreamer</em></strong> holds promise for advancing 3D content creation and finding applications in various domains.
+          </p>
+      
+          
+          <!-- results (videos) -->
+          <p class="title is-3 mt-5 has-text-centered"> Video </p>
+          <video muted autoplay controls loop> <source src="videos/HyperDreamer_Demo.mp4" type="video/mp4"> </video><br>
+      
+      
+          <p class="title is-3 mt-5 has-text-centered"> Method Overview </p>
+          <img src="images/pipeline.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+      
+          <p align="left">
+            <b>Overview of our 3D generation and editing pipeline.</b> We introduce diffusion priors, semantic priors, and derendering priors into this
+            highly under-constraint problem to enable high-resolution textures with material modeling and interactive editing after the generation.
+          </p>
+      
+          <p class="title is-3 mt-5 has-text-centered"> Single-Image Generation </p>
+          <img src="images/fig_only.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p>
+          <!-- <video muted autoplay loop> <source src="videos/image1.mp4" type="video/mp4"> </video>
+          <video muted autoplay loop> <source src="videos/image2.mp4" type="video/mp4"> </video> -->
+          
+          <p class="title is-3 mt-5 has-text-centered"> Interactive Editing  </p>
+          <p class="content has-text-centered is-size-5">
+            For a generated model or their own data, users can interactively select any region via a few clicks 
+            and efficiently edit the texture with text-based guidance.
+          </p>
+          <video muted autoplay loop> <source src="videos/editing1.mp4" type="video/mp4"> </video>
+          <video muted autoplay loop> <source src="videos/editing2.mp4" type="video/mp4"> </video>
+          <video muted autoplay loop> <source src="videos/editing3.mp4" type="video/mp4"> </video>
+      
+      
+      
+          <!-- <p class="title is-3 mt-5 has-text-centered"> Optimization Progress </p>
+          <table class="table">
+            <tbody>
+              <tr> 
+                <th> <video muted controls autoplay loop> <source src="videos/gui.mp4" type="video/mp4"> </video> </th>
+                <th> <video muted controls autoplay loop> <source src="videos/gui2.mp4" type="video/mp4"> </video> </th>
+              </tr>
+              <tr>
+                <th class="has-text-centered"> Stage 1 (Generative Gaussian Splatting) </th>
+                <th class="has-text-centered"> Stage 2 (Mesh Texture Refinement) </th>
+              </tr>
+          </table>
+          <p class="content has-text-centered is-size-5">
+            Videos are played at the original speed and recorded on an NVIDIA 3070 (8GB).
+          </p> -->
+          
+          <!-- 3d model viewer -->
+          <!-- <p class="title is-3 mt-5 has-text-centered"> Exported Meshes </p>
+          <div class="level">
+            <div class="level-item">
+              <model-viewer src="meshes/anya.glb" poster="meshes/anya.jpg" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+            <div class="level-item">
+              <model-viewer src="meshes/luigi.glb" poster="meshes/luigi.jpg" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+            <div class="level-item">
+              <model-viewer src="meshes/zelda.glb" poster="meshes/zelda.jpg" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+            <div class="level-item">
+              <model-viewer src="meshes/toy.glb" poster="meshes/toy.jpg" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+          </div>
+          
+          <p class="title is-3 mt-5 has-text-centered"> Mesh Animations </p>
+          <p class="content has-text-centered is-size-5">
+            The following results are animated by <a href="https://www.mixamo.com/">Mixamo</a>.
+          </p>
+          <div class="level">
+            <div class="level-item">
+              <model-viewer src="meshes/rabbit_animate.glb" poster="meshes/toy2.jpg" style="width: 100%; height: 300px;" autoplay shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+            <div class="level-item">
+              <model-viewer src="meshes/girl_animate.glb" poster="meshes/girl_animate.png" style="width: 100%; height: 300px;" autoplay shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+            <div class="level-item">
+              <model-viewer src="meshes/boy_animate.glb" poster="meshes/boy_animate.png" style="width: 100%; height: 300px;" autoplay shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+          </div> -->
+      
+          <!-- citation -->
+          <div class="card mt-4">
+            <header class="card-header">
+              <p class="card-header-title"> Citation </p>
+            </header>
+            <div class="card-content is-size-5 has-text-left">
+      <pre><code>@InProceedings{wu2023hyperdreamer,
+        author = {Tong Wu, Zhibing Li, Shuai Yang, Pan Zhang, Xingang Pan, Jiaqi Wang, Dahua Lin, Ziwei Liu},
+        title = {HyperDreamer: Hyper-Realistic 3D Content Generation and Editing from a Single Image},
+        journal={ACM SIGGRAPH Asia 2023 Conference Proceedings},
+        year={2023}
+      }</code></pre>
+            </div>
+          </div>
+        </div>
+      
+      
+        </section>
+      </body>
+      </html>
+      llenges, we introduce <strong><em>HyperDreamer</em></strong> with several key designs and appealing properties:
+      <b>1) Viewable:</b> 360° mesh modeling with high-resolution textures enables the creation of visually compelling 3D models from a full range of observation points.
+      <b>2) Renderable:</b> Fine-grained semantic segmentation and data-driven priors are incorporated as guidance to learn reasonable albedo, roughness, and specular properties of the materials, enabling semantic-aware arbitrary material estimation.
+      <b>3) Editable:</b> For a generated model or their own data, users can interactively select any region via a few clicks and efficiently edit the texture with text-based guidance.
       Extensive experiments demonstrate the effectiveness of <strong><em>HyperDreamer</em></strong> in modeling region-aware materials with high-resolution textures and enabling user-friendly editing. 
       We believe that <strong><em>HyperDreamer</em></strong> holds promise for advancing 3D content creation and finding applications in various domains.
     </p>
